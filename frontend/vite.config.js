@@ -4,16 +4,17 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    cssCodeSplit: true, // Ensure CSS is split
+    minify: false,      // Disable minification
     rollupOptions: {
       output: {
-        // Manually split large chunks
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Splits node_modules into a separate chunk
+            return 'vendor';
           }
         },
       },
     },
-    chunkSizeWarningLimit: 600, // Adjust the warning limit for chunk sizes
+    chunkSizeWarningLimit: 1000,
   },
 })
