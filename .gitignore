@@ -1,0 +1,68 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Binaries
+bin/
+lib-cov/
+coverage/
+build/
+dist/
+out/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Frontend
+/.nuxt
+/.temp
+/.cache
+public/static/
+.vite/
+dist/
+build/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Miscellaneous
+*.swp
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.env
+.vscode/*
+.history/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json

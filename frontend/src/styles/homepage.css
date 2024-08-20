@@ -1,0 +1,222 @@
+/* homepage.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(to bottom right, #4a90e2, #50e3c2);
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://img.freepik.com/premium-vector/patterns-seamless-pattern-black-white-abstract-pattern-style-postmodern-mashup_167718-1447.jpg");
+  opacity: 0.04;
+  z-index: 0;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.round-card {
+  position: absolute; /* Position it at the top left */
+  top: 20px; /* Adjust top position */
+  left: 20px; /* Adjust left position */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent white background */
+  padding: 10px 20px; /* Padding for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.round-card h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Font size for round number */
+  color: #333; /* Dark text color */
+}
+
+.timer1 {
+  position: absolute; /* Position it at the top center */
+  top: 20px; /* Adjust top position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent white background */
+  padding: 10px 20px; /* Padding for the timer */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.timer1 h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Font size for timer */
+  color: #333; /* Dark text color */
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  margin: 20px 0;
+  z-index: 1;
+}
+
+.loading-bar {
+  height: 100%;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+.error {
+  color: #e74c3c;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  margin: 20px auto;
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.time-over-message {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  margin: 20px auto;
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+.time-over-message h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.time-over-message p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.countdown-overlay {
+  position: fixed; /* Fixed position to cover the entire screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Slightly darker semi-transparent background */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 20; /* Ensure it appears above other elements */
+}
+
+.countdown-message {
+  background-color: #000000; /* Black background for the strip */
+  color: #ffffff; /* Pure white text for better visibility */
+  font-size: 3rem; /* Larger font size for emphasis */
+  text-align: center; /* Center the text */
+  font-family: "Arial", sans-serif; /* Modern font */
+  padding: 20px 40px; /* Add padding around the text */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5); /* Add a subtle shadow and glow */
+  z-index: 21; /* Ensure it appears above the blurred background */
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 9.5s forwards; /* Fade in and fade out animations */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6); /* Stronger white glow */
+}
+
+.countdown-message h2 {
+  color: white !important;
+}
+
+/* Keyframes for fade-in and fade-out animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
