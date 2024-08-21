@@ -53,7 +53,5 @@ const decodePassword = (saltedPassword) => {
 const encryptedPassword1 = "R:)D T:)C|-|$|_|tt!:) -|@t";
 const encryptedPassword2 = "R@$P T:)C|-|$|_|tt!:) 6:)RR>-()";
 
-console.log(decodePassword(encryptedPassword1)); // Outputs: "REDTECHSHUTTLEHAT"
-console.log(decodePassword(encryptedPassword2)); // Outputs: "RASPTECHSHUTTLEBERRYOS"
 
 export default decodePassword;
