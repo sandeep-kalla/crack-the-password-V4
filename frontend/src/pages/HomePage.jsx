@@ -39,7 +39,7 @@ const HomePage = () => {
   const [roundTimer, setRoundTimer] = useState(() => {
     // Initialize from local storage
     const savedTimer = localStorage.getItem('roundTimer');
-    return savedTimer ? Number(savedTimer) : 600; // Default to 10 minutes for Round 1
+    return savedTimer ? Number(savedTimer) : 1200; // Default to 20 minutes for Round 1
   });
 
   useEffect(() => {
@@ -103,9 +103,9 @@ const HomePage = () => {
   useEffect(() => {
     // Set the timer duration based on the current round
     if (currentRound === 1) {
-      setRoundTimer((prev) => prev <= 0 ? 600 : prev); // 10 minutes in seconds
+      setRoundTimer((prev) => prev <= 0 ? 1200 : prev); // 20 minutes in seconds
     } else if (currentRound === 2) {
-      setRoundTimer((prev) => prev <= 0 ? 1500 : prev); // 25 minutes in seconds
+      setRoundTimer((prev) => prev <= 0 ? 1800 : prev); // 30 minutes in seconds
     }
   }, [currentRound]);
 
@@ -130,10 +130,10 @@ const HomePage = () => {
     setUserEmail(email); // Store the user's email
     localStorage.setItem('userEmail', email); // Save email to local storage
     setShowSuccessMessage(true); // Show the success message
-    setCountdown(10); // Set countdown to 10 seconds
+    setCountdown(13); // Set countdown to 10 seconds
     setShowCountdown(true); // Show countdown
     setCurrentRound(2); // Update the round to 2
-    setRoundTimer(1500); // Set the round timer to 25 minutes (1500 seconds)
+    setRoundTimer(1800); // Set the round timer to 30 minutes (1800 seconds)
 
     // Start countdown timer
     const countdownInterval = setInterval(() => {
