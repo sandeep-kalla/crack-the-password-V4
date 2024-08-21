@@ -105,7 +105,7 @@ const HomePage = () => {
     if (currentRound === 1) {
       setRoundTimer((prev) => prev <= 0 ? 1200 : prev); // 20 minutes in seconds
     } else if (currentRound === 2) {
-      setRoundTimer((prev) => prev <= 0 ? 1800 : prev); // 30 minutes in seconds
+      setRoundTimer((prev) => prev <= 0 ? 1813 : prev); // 30 minutes in seconds
     }
   }, [currentRound]);
 
@@ -133,7 +133,7 @@ const HomePage = () => {
     setCountdown(13); // Set countdown to 10 seconds
     setShowCountdown(true); // Show countdown
     setCurrentRound(2); // Update the round to 2
-    setRoundTimer(1800); // Set the round timer to 30 minutes (1800 seconds)
+    setRoundTimer(1813); // Set the round timer to 30 minutes (1800 seconds)
 
     // Start countdown timer
     const countdownInterval = setInterval(() => {
