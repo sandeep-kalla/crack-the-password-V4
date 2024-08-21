@@ -49,7 +49,6 @@ const HomePage = () => {
       try {
         const { data } = await api.getSaltedPassword();
         setSaltedPassword(data.saltedPassword);
-        console.log(data.saltedPassword);
         const decryptedPassword = decodePassword(data.saltedPassword);
         setHints(generateHints(decryptedPassword));
       } catch (error) {
